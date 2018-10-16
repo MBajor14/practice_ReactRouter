@@ -30,3 +30,9 @@
     transform: rotate(360deg);
   }
 }
+
+.signup_wrapper{
+  display: flex;
+  justify-content: center;
+
+}
