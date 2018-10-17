@@ -31,8 +31,19 @@
   }
 }
 
-.signup_wrapper{
-  display: flex;
-  justify-content: center;
+/* Forms */
+.form_container{
 
+  display: flexbox;
+  flex-direction: column;
+}
+
+.form_title{
+
+  font-size: 1rm;
+}
+
+.form_field{
+
+  display: flexbox;
 }

@@ -2,10 +2,13 @@ import React, { Component } from 'react';
 import {Redirect} from 'react-router-dom'
 
 class Welcome extends Component {
-    state = { 
-        toLogin: false,
-        toSignup: false
-     }
+    constructor(props){
+        super(props);
+        this.state = { 
+            toLogin: false,
+            toSignup: false
+        }
+        }
 
      handleclick = (event) => {
         if (event.target.name === "login"){
