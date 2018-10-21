@@ -1,26 +1,28 @@
 import React from 'react';
-import {Redirect} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 const Signup = () => (
-    <div className="component_container">
-        <h1>New User</h1>
-        <form className="component_form" action="">
-            <div className="form_field">
-                <label htmlFor="first_name">First Name</label>
-                <input type="text" name="first_name" placeholder="John" />
+    <div className="login_container">
+        <form>
+            <div class="login_title">
+                <h1>Sign Up</h1>
             </div>
-            <div className="form_field">
-                <label htmlFor="last_name">Last Name</label>
-                <input type="text" name="last_name" placeholder="Smith"/>
+            <div className="form-group">
+                <input type="text" name="first_name" placeholder="First Name" />
             </div>
-            <div className="form_field">
-                <label htmlFor="email">Email</label>
-                <input type="text" name="email" placeholder="email@domain.com" />
+            <div className="form-group">
+                <input type="text" name="last_name" placeholder="Last Name"/>
             </div>
-            <div className="form_field">
-                <label htmlFor="password">Password</label>
-                <input type="text" name="password" placeholder="password"/>
+            <div className="form-group">
+                <input type="text" name="email" placeholder="email" />
             </div>
+            <div className="form-group">
+                <input type="text" name="password" placeholder="Password"/>
+            </div>
+            <div className="form-group">
+                <button type="button" className="btn btn-dark">Sign Up</button>
+            </div>
+            <Link to="/">Already a user? Log in here.</Link>
         </form>
     </div>
 )
