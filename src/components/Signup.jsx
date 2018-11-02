@@ -22,7 +22,7 @@ const Signup = () => (
             <div className="form-group">
                 <button type="button" className="btn btn-dark">Sign Up</button>
             </div>
-            <Link to="/">Already a user? Log in here.</Link>
+            <Link to="/login">Already a user? Log in here.</Link>
         </form>
     </div>
 )
