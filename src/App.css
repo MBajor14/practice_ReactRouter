@@ -55,17 +55,34 @@
 }
 
 /* Stock Info style */
-.stock_info{
+.stock-info{
   width: 512px;
   display: flex;
   flex-direction: column;
   border: 3px solid black;
   border-radius: 40px;
-  background-color: rgb(228, 231, 238);
+  background-color: rgb(41, 51, 75);
+  padding:20px;
 }
 
+.stock-info h1{
+  color: rgb(136, 67, 214);
+  /* color: rgb(109, 201, 230); */
+}
+
+.display-field-key{
+  color: rgb(224, 125, 43);
+  font-weight: 700;
+}
+
+.display-field-value{
+  color: rgb(146, 146, 146);
+}
+
+
+
 /* Style for navbar and footer placeholders */
-.placeholder_style{
+.placeholder-style{
   font-size: 40px;
   color: white;
   background-color: rgb(51, 99, 161);

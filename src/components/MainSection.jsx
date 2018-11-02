@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import Login from './Login';
 import Signup from './Signup';
-import Stock_Info from './Stock_Info';
+import StockInfo from './StockInfo';
 
-class Main_Section extends Component{
+class MainSection extends Component{
     render(){
         return(
             <Router>
@@ -22,11 +22,11 @@ class Main_Section extends Component{
                     }} />
                     <Route path="/login" component={Login} />
                     <Route path="/signup" component={Signup} />
-                    <Route path="/stock_info" component={Stock_Info} />
+                    <Route path="/stock_info" component={StockInfo} />
                 </div>
             </Router>
         );
     }
 }
 
-export default Main_Section;
+export default MainSection;
