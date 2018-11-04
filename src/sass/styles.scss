@@ -1,0 +1,101 @@
+$color_purple: rgb(136, 67, 214);
+$color_bg: rgb(41, 51, 75);
+$color_gold: rgb(209, 187, 61);
+$color_orange: rgb(224, 125, 43);
+$color_box_shadow: rgb(63, 65, 66);
+$color_subsection: rgb(54, 67, 97);
+$color_link: rgb(109, 201, 230);
+$color_text: rgb(146, 146, 146);
+
+.App {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body{
+    background-color: #848573;
+}
+
+/* Forms */
+.form-container{
+    width: 512px;
+    display: flexbox;
+    flex-direction: column;
+    border: 3px solid black;
+    border-radius: 40px;
+    background-color: $color_bg;
+    .form-title{
+        color: $color_purple;
+        display: flex;
+    }
+}
+
+/* Stock Info style */
+.stock-info-container{
+    width: 512px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 40px;
+    background-color: $color_bg;
+    padding:20px;
+    box-shadow: 5px 5px 5px $color_box_shadow;
+    .stock-info-head{
+        .stock-info-title{
+            color: $color_purple;
+            margin: 10px 0;
+        }
+        .stock-info-price{
+            color: $color_gold;
+        }
+    }
+    .stock-info-body{
+        margin: 0 10px;
+        .stock-info-left{
+            background-color: $color_subsection;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .display-field-key{
+            color: $color_orange;
+            font-weight: 700;
+            }
+            
+        .display-field-value{
+            color: $color_text;
+        }
+    }
+}
+
+/* Style for navbar and footer placeholders */
+.placeholder-style{
+font-size: 40px;
+color: $color_gold;
+background-color: $color_bg;
+width: 100%;
+height: 80px;
+line-height: 80px;
+margin-bottom: 30px;
+}
+.footer{
+margin-top: 30px;
+
+}
+
+form{
+margin: 15px 10%;
+}
+
+input[type="text"]{
+width:100%;
+margin-bottom: 20px;
+}
+
+button{
+width: 30%;
+}
+
+a{
+color: $color_link;
+}

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import MainSection from './components/smart/MainSection'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+import './css/styles.css';
 
 class App extends Component {
   render() {
