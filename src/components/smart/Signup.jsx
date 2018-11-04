@@ -1,23 +1,22 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import DisplayTitle from '../dumb/DisplayTitle'
 
 const Signup = () => (
-    <div className="login_container">
+    <div className="form-container">
         <form>
-            <div className="login_title">
-                <h1>Sign Up</h1>
+            <DisplayTitle classname="form-title" title={"Sign Up"} />
+            <div className="form-group">
+                <input className="form-control" type="text" name="first_name" placeholder="First Name" />
             </div>
             <div className="form-group">
-                <input type="text" name="first_name" placeholder="First Name" />
+                <input className="form-control" type="text" name="last_name" placeholder="Last Name"/>
             </div>
             <div className="form-group">
-                <input type="text" name="last_name" placeholder="Last Name"/>
+                <input className="form-control" type="text" name="email" placeholder="email" />
             </div>
             <div className="form-group">
-                <input type="text" name="email" placeholder="email" />
-            </div>
-            <div className="form-group">
-                <input type="text" name="password" placeholder="Password"/>
+                <input className="form-control" type="text" name="password" placeholder="Password"/>
             </div>
             <div className="form-group">
                 <button type="button" className="btn btn-dark">Sign Up</button>

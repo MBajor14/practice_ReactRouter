@@ -35,7 +35,7 @@
 }
 
 /* Forms */
-.login_container{
+.form-container{
   width: 512px;
   display: flexbox;
   flex-direction: column;
@@ -44,9 +44,9 @@
   background-color: rgb(41, 51, 75);
 }
 
-.login_container h1{
-  text-align: left;
-  margin: 0;
+.form-title{
+  color: rgb(136, 67, 214);
+  display: flex;
 }
 
 .login_title{
@@ -55,7 +55,7 @@
 }
 
 /* Stock Info style */
-.stock-info{
+.stock-info-container{
   width: 512px;
   display: flex;
   flex-direction: column;
@@ -65,9 +65,23 @@
   box-shadow: 5px 5px 5px rgb(109, 201, 230);
 }
 
-.stock-info h1{
+.stock-info-title{
   color: rgb(136, 67, 214);
-  /* color: rgb(109, 201, 230); */
+  margin: 10px 0;
+}
+
+.stock-info-body{
+  margin: 0 10px;
+}
+
+.stock-info-left{
+  background-color: rgb(54, 67, 97);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.stock-info-price{
+  color: rgb(109, 201, 230);
 }
 
 .display-field-key{
@@ -85,7 +99,7 @@
 .placeholder-style{
   font-size: 40px;
   color: white;
-  background-color: rgb(51, 99, 161);
+  background-color: rgb(41, 51, 75);
   width: 100%;
   height: 80px;
   line-height: 80px;
@@ -110,5 +124,5 @@ button{
 }
 
 a{
-  color: #1f41b1;
+  color: rgb(109, 201, 230);
 }

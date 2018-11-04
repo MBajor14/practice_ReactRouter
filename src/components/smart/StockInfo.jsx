@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import DisplayField from '../dumb/DisplayField';
 import DisplayTitle from '../dumb/DisplayTitle';
+import Price from '../dumb/Price'
 
 const API_PREFIX = "https://api.iextrading.com/1.0";
 
@@ -18,12 +19,14 @@ class StockInfo extends Component {
             CEO: null,
             num_of_employees: null
          }
+
+         this.getStockInfo("amzn");
     }
 
     // getStockInfo is central function for the API calls since we need multiple 
     // calls to get all data
-    getStockInfo = () =>{
-        const ticker = "msft";
+    getStockInfo = (ticker) =>{
+        //const ticker = "msft";
         this.getStockInfo_Company(ticker);
         this.getStockInfo_Quote(ticker);
         this.getStockInfo_News(ticker);
@@ -62,17 +65,24 @@ class StockInfo extends Component {
 
     render() { 
         return ( 
-            <div className="stock-info">
-                <DisplayTitle value={this.state.ticker}/>
-                <DisplayField d_key={"Price"} value={this.state.price}/>
-                <DisplayField d_key={"Chart"} value={this.state.chart}/>
-                <DisplayField d_key={"Market Cap"} value={this.state.market_cap}/>
-                <DisplayField d_key={"Volume"} value={this.state.volume}/>
-                <DisplayField d_key={"Description"} value={this.state.description}/>
-                <DisplayField d_key={"Trending News"} value={this.state.trending_news}/>
-                <DisplayField d_key={"CEO"} value={this.state.CEO} />
-                <div>
-                    <button onClick={this.getStockInfo}>Generate</button>
+            <div className="stock-info-container">
+                <div class="stock-info-head row">
+                    <DisplayTitle classname={"stock-info-title col-md-6"} title={this.state.ticker}/>
+                    <div class="col-md-6">
+                        <Price price={this.state.price}/>
+                    </div>
+                </div>
+                <div class="stock-info-body row">
+                    <div class="stock-info-left col-md-4">
+                        <DisplayField d_key={"Chart"} value={this.state.chart}/>
+                        <DisplayField d_key={"Market Cap"} value={this.state.market_cap}/>
+                        <DisplayField d_key={"Volume"} value={this.state.volume}/>
+                        <DisplayField d_key={"CEO"} value={this.state.CEO} />
+                    </div>
+                    <div class="stock-info-right col-md-8">
+                        <DisplayField d_key={"Description"} value={this.state.description}/>
+                        <DisplayField d_key={"Trending News"} value={this.state.trending_news}/>
+                    </div>
                 </div>
             </div>
          );
