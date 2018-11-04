@@ -41,7 +41,7 @@
   flex-direction: column;
   border: 3px solid black;
   border-radius: 40px;
-  background-color: rgb(228, 231, 238);
+  background-color: rgb(41, 51, 75);
 }
 
 .login_container h1{
@@ -59,10 +59,10 @@
   width: 512px;
   display: flex;
   flex-direction: column;
-  border: 3px solid black;
   border-radius: 40px;
   background-color: rgb(41, 51, 75);
   padding:20px;
+  box-shadow: 5px 5px 5px rgb(109, 201, 230);
 }
 
 .stock-info h1{

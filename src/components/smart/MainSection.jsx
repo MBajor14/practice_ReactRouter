@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
-import Login from './Login';
-import Signup from './Signup';
-import StockInfo from './StockInfo';
+import Login from '../smart/Login';
+import Signup from '../smart/Signup';
+import StockInfo from '../smart/StockInfo';
 
 class MainSection extends Component{
     render(){

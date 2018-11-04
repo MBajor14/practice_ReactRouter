@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import DisplayField from './DisplayField';
-import DisplayTitle from './DisplayTitle';
+import DisplayField from '../dumb/DisplayField';
+import DisplayTitle from '../dumb/DisplayTitle';
 
 const API_PREFIX = "https://api.iextrading.com/1.0";
 
