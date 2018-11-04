@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router} from 'react-router-dom'
-import MainSection from './components/smart/MainSection';
+import Body from './components/dumb/Body';
 import CustomNavBar from './components/smart/CustomNavBar';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
@@ -11,7 +11,7 @@ class App extends Component {
       <Router>
         <div className="App container">
           <CustomNavBar />
-          <MainSection />
+          <Body />
           <p className="placeholder-style footer">Footer Placeholder</p>
         </div>
       </Router>

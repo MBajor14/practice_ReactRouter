@@ -20,7 +20,7 @@ class StockInfo extends Component {
             num_of_employees: null
          }
 
-         this.getStockInfo("amzn");
+         this.getStockInfo("googl");
     }
 
     // getStockInfo is central function for the API calls since we need multiple 
@@ -66,21 +66,23 @@ class StockInfo extends Component {
     render() { 
         return ( 
             <div className="stock-info-container">
-                <div class="stock-info-head row">
+                <div className="stock-info-head row">
                     <DisplayTitle classname={"stock-info-title col-md-6"} title={this.state.ticker}/>
-                    <div class="col-md-6">
+                    <div className="col-md-6">
                         <Price price={this.state.price}/>
                     </div>
                 </div>
-                <div class="stock-info-body row">
-                    <div class="stock-info-left col-md-4">
+                <div className="stock-info-body row">
+                    <div className="stock-info-left col-md-4">
                         <DisplayField d_key={"Chart"} value={this.state.chart}/>
                         <DisplayField d_key={"Market Cap"} value={this.state.market_cap}/>
                         <DisplayField d_key={"Volume"} value={this.state.volume}/>
                         <DisplayField d_key={"CEO"} value={this.state.CEO} />
                     </div>
-                    <div class="stock-info-right col-md-8">
+                    <div className="stock-info-right col-md-8">
                         <DisplayField d_key={"Description"} value={this.state.description}/>
+                    </div>
+                    <div className="stock-info-bottom col-md-10">
                         <DisplayField d_key={"Trending News"} value={this.state.trending_news}/>
                     </div>
                 </div>

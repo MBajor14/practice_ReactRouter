@@ -6,6 +6,7 @@ $color_box_shadow: rgb(63, 65, 66);
 $color_subsection: rgb(54, 67, 97);
 $color_link: rgb(109, 201, 230);
 $color_text: rgb(146, 146, 146);
+$color_border: rgba(255,255,255,0.06);
 
 .App {
     text-align: center;
@@ -56,14 +57,28 @@ body{
 .stock-info-price{
     color: $color_gold;
 }
-.stock-info-body{
-    margin: 0 10px;
+
+.stock-info-head {
+    border-bottom: solid 2px $color_border;
+    margin-bottom: 20px;
+}
+  
+.stock-info-body {
+    margin: 10px 10px; 
+    justify-content: center;
 }
 
 .stock-info-left{
     background-color: $color_subsection;
     border-radius: 10px;
     padding: 10px;
+}
+
+.stock-info-bottom{
+    padding: 10px;
+    text-align: left;
+    border-top: solid 2px $color_border;
+    margin-top: 20px;
 }
 
 .display-field-key{
