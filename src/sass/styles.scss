@@ -14,6 +14,10 @@ $color_text: rgb(146, 146, 146);
     align-items: center;
 }
 
+.nav-temp Link{
+    margin: 5px;
+}
+
 body{
     background-color: #848573;
 }
@@ -26,10 +30,11 @@ body{
     border: 3px solid black;
     border-radius: 40px;
     background-color: $color_bg;
-    .form-title{
-        color: $color_purple;
-        display: flex;
-    }
+}
+
+.form-title{
+    color: $color_purple;
+    display: flex;
 }
 
 /* Stock Info style */
@@ -41,31 +46,33 @@ body{
     background-color: $color_bg;
     padding:20px;
     box-shadow: 5px 5px 5px $color_box_shadow;
-    .stock-info-head{
-        .stock-info-title{
-            color: $color_purple;
-            margin: 10px 0;
-        }
-        .stock-info-price{
-            color: $color_gold;
-        }
-    }
-    .stock-info-body{
-        margin: 0 10px;
-        .stock-info-left{
-            background-color: $color_subsection;
-            border-radius: 10px;
-            padding: 10px;
-        }
-        .display-field-key{
-            color: $color_orange;
-            font-weight: 700;
-            }
-            
-        .display-field-value{
-            color: $color_text;
-        }
-    }
+}
+
+.stock-info-title{
+    color: $color_purple;
+    margin: 10px 0;
+}
+
+.stock-info-price{
+    color: $color_gold;
+}
+.stock-info-body{
+    margin: 0 10px;
+}
+
+.stock-info-left{
+    background-color: $color_subsection;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.display-field-key{
+    color: $color_orange;
+    font-weight: 700;
+}
+    
+.display-field-value{
+    color: $color_text;
 }
 
 /* Style for navbar and footer placeholders */

@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
-import MainSection from './components/smart/MainSection'
+import {BrowserRouter as Router} from 'react-router-dom'
+import MainSection from './components/smart/MainSection';
+import CustomNavBar from './components/smart/CustomNavBar';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App container">
-        <p className="placeholder-style">Navbar Placeholder</p>
-        <MainSection />
-        <p className="placeholder-style footer">Footer Placeholder</p>
-      </div>
+      <Router>
+        <div className="App container">
+          <CustomNavBar />
+          <MainSection />
+          <p className="placeholder-style footer">Footer Placeholder</p>
+        </div>
+      </Router>
     );
   }
 }
