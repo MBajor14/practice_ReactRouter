@@ -28,6 +28,11 @@ $color_gradient_end: rgba(224, 125, 43, 0.3);
     background-size: cover; 
 } */
 
+#homepageTemp{
+    margin-top: 100px;
+    color: $color_link;
+}
+
 html, body{
     height: 100%;
     margin: 0;
@@ -43,12 +48,6 @@ html, body{
     align-items: center;
 }
 
-.nav-temp Link{
-    margin: 5px;
-}
-
-
-
 /* Forms */
 .form-container{
     width: 512px;
@@ -58,11 +57,13 @@ html, body{
     background-color: $color_bg;
     padding:20px;
     box-shadow: 5px 5px 5px $color_box_shadow;
+    margin-top: 30px;
 }
 
 .form-title{
     color: $color_purple;
     display: flex;
+    margin-bottom: 20px;
 }
 
 /* Stock Info style */
@@ -109,12 +110,26 @@ html, body{
 
 /* Style for navbar and footer placeholders */
 .navbar{
-    margin-bottom: 30px;
     background-color: $color_bg;
-}
-    .navbar a{
+    a{
         color: $color_gold;
     }
+    .container{
+        justify-content: flex-start;
+    }
+}
+
+.navbar-brand{
+    font-size: 30px;
+}
+
+.nav{
+    flex-direction: row;
+    margin-left: 50px;
+    li{
+        margin:8px;
+    }
+}
 
 .footer{
     font-size: 40px;

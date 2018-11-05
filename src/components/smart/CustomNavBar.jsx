@@ -12,27 +12,27 @@ class CustomNavbar extends Component {
             <Link to="/"> Midas </Link>
           </Navbar.Brand>
         </Navbar.Header>
-          <Nav>
+        <Nav>
 
-            <LinkContainer to="/login">
-              <NavItem eventKey={1}>
-                Login
-              </NavItem>
-            </LinkContainer>
+          <LinkContainer to="/login">
+            <NavItem eventKey={1}>
+              Login
+            </NavItem>
+          </LinkContainer>
 
-            <LinkContainer to="/signup">
-              <NavItem eventKey={2}>
-                Signup
-              </NavItem>
-            </LinkContainer>
+          <LinkContainer to="/signup">
+            <NavItem eventKey={2}>
+              Signup
+            </NavItem>
+          </LinkContainer>
 
-            <LinkContainer to="/stock_info">
-              <NavItem eventKey={3}>
-                Stock Info
-              </NavItem>
-            </LinkContainer>
+          <LinkContainer to="/stock_info">
+            <NavItem eventKey={3}>
+              Stock Info
+            </NavItem>
+          </LinkContainer>
 
-          </Nav>
+        </Nav>
       </Navbar>
     );
   }

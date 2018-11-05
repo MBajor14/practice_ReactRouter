@@ -14,6 +14,10 @@
     background-repeat: no-repeat;
     background-size: cover; 
 } */
+#homepageTemp {
+  margin-top: 100px;
+  color: #6dc9e6; }
+
 html, body {
   height: 100%;
   margin: 0;
@@ -26,9 +30,6 @@ html, body {
   flex-direction: column;
   align-items: center; }
 
-.nav-temp Link {
-  margin: 5px; }
-
 /* Forms */
 .form-container {
   width: 512px;
@@ -37,11 +38,13 @@ html, body {
   border-radius: 40px;
   background-color: rgba(41, 51, 75, 0.9);
   padding: 20px;
-  box-shadow: 5px 5px 5px #3f4142; }
+  box-shadow: 5px 5px 5px #3f4142;
+  margin-top: 30px; }
 
 .form-title {
   color: #8843d6;
-  display: flex; }
+  display: flex;
+  margin-bottom: 20px; }
 
 /* Stock Info style */
 .stock-info-title {
@@ -79,11 +82,20 @@ html, body {
 
 /* Style for navbar and footer placeholders */
 .navbar {
-  margin-bottom: 30px;
   background-color: rgba(41, 51, 75, 0.9); }
+  .navbar a {
+    color: #d1bb3d; }
+  .navbar .container {
+    justify-content: flex-start; }
 
-.navbar a {
-  color: #d1bb3d; }
+.navbar-brand {
+  font-size: 30px; }
+
+.nav {
+  flex-direction: row;
+  margin-left: 50px; }
+  .nav li {
+    margin: 8px; }
 
 .footer {
   font-size: 40px;
