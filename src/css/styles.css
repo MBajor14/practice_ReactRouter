@@ -32,19 +32,6 @@ html, body {
 /* Forms */
 .form-container {
   width: 512px;
-  display: flexbox;
-  flex-direction: column;
-  border: 3px solid black;
-  border-radius: 40px;
-  background-color: rgba(41, 51, 75, 0.9); }
-
-.form-title {
-  color: #8843d6;
-  display: flex; }
-
-/* Stock Info style */
-.stock-info-container {
-  width: 512px;
   display: flex;
   flex-direction: column;
   border-radius: 40px;
@@ -52,6 +39,11 @@ html, body {
   padding: 20px;
   box-shadow: 5px 5px 5px #3f4142; }
 
+.form-title {
+  color: #8843d6;
+  display: flex; }
+
+/* Stock Info style */
 .stock-info-title {
   color: #8843d6;
   margin: 10px 0; }

@@ -20,7 +20,7 @@ class StockInfo extends Component {
             num_of_employees: null
          }
 
-         this.getStockInfo("aapl");
+         this.getStockInfo("msft");
     }
 
     // getStockInfo is central function for the API calls since we need multiple 
@@ -65,7 +65,7 @@ class StockInfo extends Component {
 
     render() { 
         return ( 
-            <div className="stock-info-container">
+            <div className="form-container">
                 <div className="stock-info-head row">
                     <DisplayTitle classname={"stock-info-title col-md-6"} title={this.state.ticker}/>
                     <div className="col-md-6">

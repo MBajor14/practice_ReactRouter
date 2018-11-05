@@ -52,21 +52,6 @@ html, body{
 /* Forms */
 .form-container{
     width: 512px;
-    display: flexbox;
-    flex-direction: column;
-    border: 3px solid black;
-    border-radius: 40px;
-    background-color: $color_bg;
-}
-
-.form-title{
-    color: $color_purple;
-    display: flex;
-}
-
-/* Stock Info style */
-.stock-info-container{
-    width: 512px;
     display: flex;
     flex-direction: column;
     border-radius: 40px;
@@ -75,6 +60,12 @@ html, body{
     box-shadow: 5px 5px 5px $color_box_shadow;
 }
 
+.form-title{
+    color: $color_purple;
+    display: flex;
+}
+
+/* Stock Info style */
 .stock-info-title{
     color: $color_purple;
     margin: 10px 0;
