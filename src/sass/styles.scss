@@ -28,7 +28,7 @@ $color_gradient_end: rgba(224, 125, 43, 0.3);
     background-size: cover; 
 } */
 
-body, html{
+html, body{
     height: 100%;
     margin: 0;
     background: linear-gradient($color_gradient_start, $color_gradient_end),

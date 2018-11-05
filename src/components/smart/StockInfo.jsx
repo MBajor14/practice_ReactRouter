@@ -20,7 +20,7 @@ class StockInfo extends Component {
             num_of_employees: null
          }
 
-         this.getStockInfo("googl");
+         this.getStockInfo("aapl");
     }
 
     // getStockInfo is central function for the API calls since we need multiple 

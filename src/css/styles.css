@@ -14,7 +14,7 @@
     background-repeat: no-repeat;
     background-size: cover; 
 } */
-body, html {
+html, body {
   height: 100%;
   margin: 0;
   background: linear-gradient(rgba(212, 182, 156, 0.5), rgba(224, 125, 43, 0.3)), url("../img/stockmarketimage.jpeg") no-repeat center;
