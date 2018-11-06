@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import DisplayField from '../dumb/DisplayField';
 import DisplayTitle from '../dumb/DisplayTitle';
-import Price from '../dumb/Price'
+import Price from '../dumb/Price';
+import TrendingNews from '../dumb/TrendingNews';
 
 const API_PREFIX = "https://api.iextrading.com/1.0";
 
@@ -17,16 +18,17 @@ class StockInfo extends Component {
             description: null,
             trending_news: null,
             CEO: null,
-            num_of_employees: null
+            num_of_employees: null,
+            week52High: null,
+            week52Low: null
          }
 
-         this.getStockInfo("msft");
+         this.getStockInfo("aapl");
     }
 
     // getStockInfo is central function for the API calls since we need multiple 
     // calls to get all data
     getStockInfo = (ticker) =>{
-        //const ticker = "msft";
         this.getStockInfo_Company(ticker);
         this.getStockInfo_Quote(ticker);
         this.getStockInfo_News(ticker);
@@ -44,22 +46,24 @@ class StockInfo extends Component {
     }
 
     getStockInfo_Quote = async (ticker) => {
-        const api_call = await fetch(`${API_PREFIX}/stock/${ticker}/quote?filter=latestPrice,latestVolume,marketCap`);
+        const api_call = await fetch(`${API_PREFIX}/stock/${ticker}/quote?filter=latestPrice,latestVolume,marketCap,week52High,week52Low`);
         const data = await api_call.json();
 
         this.setState({
             price: data.latestPrice,
             volume: data.latestVolume,
-            market_cap: data.marketCap
+            market_cap: data.marketCap,
+            week52High: data.week52High,
+            week52Low: data.week52Low
         })
     }
 
     getStockInfo_News = async (ticker) => {
-        const api_call = await fetch(`${API_PREFIX}/stock/${ticker}/news/last/1`);
+        const api_call = await fetch(`${API_PREFIX}/stock/${ticker}/news/last/4`);
         const data = await api_call.json();
-
+        
         this.setState({
-            trending_news: data[0].headline
+            trending_news: data
         })
     }
 
@@ -83,7 +87,12 @@ class StockInfo extends Component {
                         <DisplayField d_key={"Description"} value={this.state.description}/>
                     </div>
                     <div className="stock-info-bottom col-md-10">
-                        <DisplayField d_key={"Trending News"} value={this.state.trending_news}/>
+                        
+                        <TrendingNews articles={this.state.trending_news} />
+                        {
+                            this.state.trending_news &&
+                            this.state.trending_news.forEach((i)=>console.log({i}))
+                        }
                     </div>
                 </div>
             </div>
