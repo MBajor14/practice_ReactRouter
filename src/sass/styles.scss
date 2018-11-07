@@ -7,41 +7,44 @@ $color_subsection: rgb(54, 67, 97);
 $color_link: rgb(109, 201, 230);
 $color_text: rgb(146, 146, 146);
 $color_border: rgba(255,255,255,0.06);
-
 $color_gradient_start: rgba(212, 182, 156, 0.5);
 $color_gradient_end: rgba(224, 125, 43, 0.3);
 
-/* html { 
-    background: url("../img/NY_stock_exchange_traders_floor_LC-U9-10548-6.jpg") no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 100%;
-  }
-
-  body{
-    background-color: #848573;
-    background: linear-gradient(rgba(0, 0, 255, 0.3), rgba(255, 255, 0, 0.3)), 
-                url("../img/NY_stock_exchange_traders_floor_LC-U9-10548-6.jpg");
-    background-repeat: no-repeat;
-    background-size: cover; 
-} */
+$footer-height: 80px;
 
 #homepageTemp{
-    margin-top: 100px;
-    color: $color_link;
+    margin: 100px 0;
+    color: rgb(255, 255, 255);
 }
 
 html, body{
     height: 100%;
+    position: relative;
+}
+
+body{
+    min-height: 100vh;
     margin: 0;
     background: linear-gradient($color_gradient_start, $color_gradient_end),
                 url("../img/stockmarketimage.jpeg") no-repeat center;
     background-size: cover;
+    background-attachment: fixed;
 }
 
-.App {
+.app {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container{
+    min-height: 100vh; /* will cover the 100% of viewport */
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding-bottom: $footer-height; /* height of your footer */
+}
+
+.body-container{
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -57,7 +60,7 @@ html, body{
     background-color: $color_bg;
     padding:20px;
     box-shadow: 5px 5px 5px $color_box_shadow;
-    margin-top: 30px;
+    margin: 30px auto;
 }
 
 .form-title{
@@ -131,20 +134,18 @@ html, body{
     }
 }
 
-.footer{
+#footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
     font-size: 40px;
     color: $color_gold;
     background-color: $color_bg;
-    width: 100%;
-    height: 80px;
-    line-height: 80px;
+    height: $footer-height;
+    line-height: $footer-height;
     margin: 0;
     text-align: center;
-
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    right: 0;
 }
 
 form{

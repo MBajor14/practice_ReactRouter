@@ -10,10 +10,10 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div>
+        <div className="app main-container">
           <CustomNavBar />
           <Body />
-          <p className="footer">Footer Placeholder</p>
+          <p id="footer">Footer Placeholder</p>
         </div>
       </Router>
     );

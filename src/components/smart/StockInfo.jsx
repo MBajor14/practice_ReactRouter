@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import DisplayField from '../dumb/DisplayField';
 import DisplayTitle from '../dumb/DisplayTitle';
 import Price from '../dumb/Price';
-import TrendingNews from '../dumb/TrendingNews';
+import TrendingNews from './TrendingNews';
 
 const API_PREFIX = "https://api.iextrading.com/1.0";
 
@@ -22,16 +22,18 @@ class StockInfo extends Component {
             week52High: null,
             week52Low: null
          }
+    }
 
-         this.getStockInfo("aapl");
+    componentDidMount(){
+        this.getStockInfo("aapl");
     }
 
     // getStockInfo is central function for the API calls since we need multiple 
     // calls to get all data
-    getStockInfo = (ticker) =>{
-        this.getStockInfo_Company(ticker);
-        this.getStockInfo_Quote(ticker);
-        this.getStockInfo_News(ticker);
+    getStockInfo = async (ticker) =>{
+        await this.getStockInfo_Company(ticker);
+        await this.getStockInfo_Quote(ticker);
+        await this.getStockInfo_News(ticker);
     }
 
     getStockInfo_Company = async (ticker) => {
@@ -59,9 +61,9 @@ class StockInfo extends Component {
     }
 
     getStockInfo_News = async (ticker) => {
-        const api_call = await fetch(`${API_PREFIX}/stock/${ticker}/news/last/4`);
+        const api_call = await fetch(`${API_PREFIX}/stock/${ticker}/news/last/4`)
         const data = await api_call.json();
-        
+
         this.setState({
             trending_news: data
         })
@@ -87,12 +89,7 @@ class StockInfo extends Component {
                         <DisplayField d_key={"Description"} value={this.state.description}/>
                     </div>
                     <div className="stock-info-bottom col-md-10">
-                        
                         <TrendingNews articles={this.state.trending_news} />
-                        {
-                            this.state.trending_news &&
-                            this.state.trending_news.forEach((i)=>console.log({i}))
-                        }
                     </div>
                 </div>
             </div>

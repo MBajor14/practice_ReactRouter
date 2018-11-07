@@ -6,7 +6,7 @@ import StockInfo from '../smart/StockInfo';
 
 const Body = () => {
     return(
-        <div className="App container">
+        <div className="body-container container">
             <Route path="/" exact render={()=>{return(<h1 id="homepageTemp">Home Page</h1>)}} />
             <Route path="/login" component={Login} />
             <Route path="/signup" component={Signup} />
