@@ -75,7 +75,7 @@ class StockInfo extends Component {
                 <div className="stock-info-head row">
                     <DisplayTitle classname={"stock-info-title col-md-6"} title={this.state.ticker}/>
                     <div className="col-md-6">
-                        <Price price={this.state.price}/>
+                        <Price price={this.state.price} w52high={this.state.week52High} w52low={this.state.week52Low} />
                     </div>
                 </div>
                 <div className="stock-info-body row">
@@ -88,7 +88,7 @@ class StockInfo extends Component {
                     <div className="stock-info-right col-md-8">
                         <DisplayField d_key={"Description"} value={this.state.description}/>
                     </div>
-                    <div className="stock-info-bottom col-md-10">
+                    <div className="stock-info-bottom col-md-12">
                         <TrendingNews articles={this.state.trending_news} />
                     </div>
                 </div>
