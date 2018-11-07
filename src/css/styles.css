@@ -44,6 +44,7 @@ body {
 
 .form-title {
   color: #8843d6;
+  font-size: 40px;
   display: flex;
   margin-bottom: 20px; }
 
@@ -60,6 +61,13 @@ body {
 .stock-info-head {
   border-bottom: solid 2px rgba(255, 255, 255, 0.06);
   margin: 10px 20px; }
+
+.stock-info-ticker {
+  font-size: 45px;
+  background: linear-gradient(45deg, rgba(209, 187, 61, 0.8), rgba(209, 187, 61, 0) 70%), linear-gradient(135deg, rgba(109, 201, 230, 0.8), rgba(109, 201, 230, 0) 70%), linear-gradient(180deg, rgba(224, 125, 43, 0.8), rgba(224, 125, 43, 0) 70%), linear-gradient(225deg, rgba(192, 173, 214, 0.8), rgba(136, 67, 214, 0) 70%);
+  border: 2mm inset #37beb8;
+  border-radius: 25px;
+  width: 200px; }
 
 .stock-info-body {
   margin: 10px 10px;
@@ -127,8 +135,7 @@ form {
 
 input[type="text"] {
   width: 100%;
-  margin-bottom: 20px;
-  color: red; }
+  margin-bottom: 20px; }
 
 button {
   width: 30%; }

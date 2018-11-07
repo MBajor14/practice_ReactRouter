@@ -3,9 +3,9 @@ import React from 'react';
 const DisplayTitle = props => (
     <div className={props.classname}>
         {
-            props.title && <h1>
+            props.title && <div>
                     <strong>{props.title}</strong>
-            </h1>
+            </div>
         }
     </div>
 )
