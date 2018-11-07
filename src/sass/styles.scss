@@ -83,7 +83,7 @@ body{
 
 .stock-info-head {
     border-bottom: solid 2px $color_border;
-    margin-bottom: 20px;
+    margin: 10px 20px;
 }
   
 .stock-info-body {
@@ -106,6 +106,7 @@ body{
 
 .stock-info-week52Limits{
     align-self: center;
+    justify-content: center;
 }
 
 .display-field-key{
@@ -169,6 +170,7 @@ form{
 input[type="text"]{
     width:100%;
     margin-bottom: 20px;
+    color: red;
 }
 
 button{
