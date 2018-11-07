@@ -74,6 +74,7 @@ body {
   justify-content: center; }
 
 .stock-info-left {
+  border: 1px inset #929292;
   background-color: #364361;
   border-radius: 10px;
   padding: 10px; }
