@@ -26,9 +26,15 @@ class CustomNavbar extends Component {
             </NavItem>
           </LinkContainer>
 
-          <LinkContainer to="/stock_info">
+          <LinkContainer to="/stock-info">
             <NavItem eventKey={3}>
               Stock Info
+            </NavItem>
+          </LinkContainer>
+
+          <LinkContainer to="/user-info">
+            <NavItem eventKey={4}>
+              User Info
             </NavItem>
           </LinkContainer>
 

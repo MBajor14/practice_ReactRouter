@@ -25,7 +25,7 @@ class StockInfo extends Component {
     }
 
     componentDidMount(){
-        this.getStockInfo("msft");
+        this.getStockInfo("aapl");
     }
 
     // getStockInfo is central function for the API calls since we need multiple 
@@ -71,7 +71,7 @@ class StockInfo extends Component {
 
     render() { 
         return ( 
-            <div className="form-container">
+            <div className="component-container">
                 <div className="stock-info-head row">
                     <DisplayTitle classname={"stock-info-title col-md-6 stock-info-ticker"} title={this.state.ticker}/>
                     <div className="col-md-6">

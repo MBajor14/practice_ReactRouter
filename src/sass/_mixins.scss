@@ -1,0 +1,10 @@
+// container for all full working components, not pieces
+.component-container{
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: $color_bg;
+    padding:20px;
+    box-shadow: 5px 5px 5px $color_box_shadow;
+    margin: 30px auto;
+}

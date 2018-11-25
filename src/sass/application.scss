@@ -1,0 +1,227 @@
+@import "colors";
+@import "mixins";
+
+$footer-height: 80px;
+
+#homepageTemp{
+    margin: 100px 0;
+    color: rgb(138, 125, 125);
+}
+
+html, body{
+    height: 100%;
+    position: relative;
+}
+
+body{
+    
+    margin: 0;
+    //background: linear-gradient($color_gradient_start, $color_gradient_end),
+    //            url("../img/stockmarketimage.jpeg") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container{
+    min-height: 100vh; /* will cover the 100% of viewport */
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding-bottom: $footer-height; /* height of your footer */
+}
+
+.body-container{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Forms */
+.form-title{
+    color: $color_purple;
+    font-size: 40px;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+/* Stock Info style */
+.stock-info-title{
+    color: $color_purple;
+    margin: 10px 0;
+}
+
+.stock-info-price{
+    color: $color_gold;
+    align-self: center;
+    margin: 0 10px;
+}
+
+.stock-info-head {
+    border-bottom: solid 2px $color_border;
+    margin: 10px 20px;
+}
+
+.stock-info-ticker{
+    font-size: 45px;
+    background: linear-gradient(45deg, $color_ticker1_1, $color_ticker1_0 70%),
+                linear-gradient(135deg, $color_ticker4_1, $color_ticker4_0 70%),
+                linear-gradient(180deg, $color_ticker3_1, $color_ticker3_0 70%),
+                linear-gradient(225deg, $color_ticker2_1, $color_ticker2_0 70%);
+    border: 2mm inset rgb(55, 190, 184);
+    border-radius: 25px;
+    width: 200px;
+}
+  
+.stock-info-body {
+    margin: 10px 10px; 
+    justify-content: center;
+}
+
+.stock-info-left{
+    border: 1px inset $color_text;
+    background-color: $color_subsection;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.stock-info-bottom{
+    padding: 10px;
+    text-align: left;
+    border-top: solid 2px $color_border;
+    margin-top: 20px;
+}
+
+.stock-info-week52Limits{
+    align-self: center;
+    justify-content: center;
+}
+
+.display-field-key{
+    color: $color_orange;
+    font-weight: 700;
+}
+    
+.display-field-value{
+    color: $color_text;
+}
+
+.week-52-low{
+    color: rgb(184, 53, 53);
+}
+
+.week-52-high{
+    color: rgb(41, 163, 41);
+}
+
+/* Style for navbar and footer placeholders */
+.navbar{
+    background-color: $color_bg;
+    a{
+        color: $color_gold;
+    }
+    .container{
+        justify-content: flex-start;
+    }
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 5px rgba(0,0,0,.075);
+}
+
+.navbar-brand{
+    font-size: 30px;
+}
+
+.nav{
+    flex-direction: row;
+    margin-left: 50px;
+    li{
+        margin:8px;
+    }
+}
+
+#footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    font-size: 20px;
+    color: $color_gold;
+    background-color: $color_bg;
+    height: $footer-height;
+    line-height: $footer-height;
+    margin: 0;
+    text-align: center;
+}
+
+form{
+    margin: 15px 10%;
+}
+
+input[type="text"]{
+    width:100%;
+    margin-bottom: 20px;
+}
+
+button{
+    width: 30%;
+}
+
+a{
+    color: $color_link;
+}
+
+/* 
+    Media Component Styles (react-bootstrap)
+*/
+.media{
+    border-radius: 10px;
+    background-color: $color_subsection;
+    margin: 10px;
+    padding: 10px;
+}
+
+.media-heading{
+    color: $color_link;
+    font-size: 18px;
+}
+
+.media-body{
+    p{
+        color: $color_text;
+        font-size: 14px;
+    }
+}
+
+.price{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+/* 
+    UserInfo Component
+*/
+
+.userInfo{
+    display: flex;
+    flex-direction: row;
+    // width: 100%;
+}
+
+.userInfo-avatar {
+    img{
+        border-radius: 5px;
+    }
+}
+
+.userInfo-details{
+    border: 1px inset $color_text;
+    background-color: $color_subsection;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0 10px;
+}

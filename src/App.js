@@ -5,7 +5,7 @@ import Body from './components/dumb/Body';
 import Footer from './components/dumb/Footer'
 
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import './css/styles.css';
+import './css/application.css';
 
 class App extends Component {
   render() {

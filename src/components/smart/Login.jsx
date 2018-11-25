@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import DisplayTitle from '../dumb/DisplayTitle'
 
 const Login = () => (
-    <div className="form-container">
+    <div className="login component-container">
         <form>
             <DisplayTitle classname={"form-title"} title={"Log In"} />
             <div className="form-group">
